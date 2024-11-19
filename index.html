@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieferando</title>
+    <link rel="icon" href="./img/logo/407863-Lieferando-Logo-Orange-Primary-Vertical-Stacked-RGB-dc122b-original-1637232267 (1) (1).png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="render()">
+
+    <header class="d-flex">
+        <div class="logo">
+            <img class="logo-1" src="./img/logo/lieferandocrop.png" alt="">
+            <img class="logo-2"
+                src="./img/logo/407863-Lieferando-Logo-Orange-Primary-Vertical-Stacked-RGB-dc122b-original-1637232267 (1) (1).png"
+                alt="">
+        </div>
+        <h5>Speisekarte</h5>
+        <div class="header-icons">
+            <img src="./img/icons/osterreich.png" alt="">
+            <img src="./img/icons/bars-solid (1).svg" alt="">
+        </div>
+    </header>
+
+    <main class="main-section">
+        <div class="menu-section d-flex">
+            <div class="restaurant-img">
+                <img src="./img/food/3.jpg" alt="">
+            </div>
+            <div class="main-wrapper">
+                <div class="description d-flex">
+                    <div class="restaurant-logo">
+                        <img src="./img/logo/cartel.png" alt="">
+                    </div>
+
+                    <div class="restaurant-info d-flex">
+                        <h1>Pizza Cartel</h1>
+                        <div class="restaurant-info-icon">
+                            <img src="./img/icons/info-solid.svg" alt="">
+                        </div>
+                        <div class="restaurant-like-icon">
+                            <img src="./img/icons/heart-regular (1).svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="rating d-flex">
+                        <img src="./img/icons/star-solid.svg" alt="">
+                        <img src="./img/icons/star-solid.svg" alt="">
+                        <img src="./img/icons/star-solid.svg" alt="">
+                        <img src="./img/icons/star-solid.svg" alt="">
+                        <img src="./img/icons/star-half-stroke-regular.svg" alt="">
+                        <a href="#">1367 Bewertungen</a>
+                    </div>
+
+                    <div id="location" class="location d-flex d-none">
+                        <img src="./img/icons/platzhalter.png" alt="">
+                        <a href="#">El Mexicana Straße 42</a>
+                    </div>
+                    <div id="minOrderDeliveryCost" class="min-order-delivery-cost d-flex">
+                        <img src="./img/icons/einkaufstasche.png" alt="">
+                        <a href="#">Min. 15.00 €</a>
+                        <img src="./img/icons/circle-solid.svg" alt="">
+                        <img src="./img/icons/fahrrad (1).png" alt="">
+                        <a href="#">5.00 €</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="navContainer" class="nav-container">
+
+                <div class="menu-nav-bar d-flex">
+                    <div class="menu-nav-icon">
+                        <img src="./img/icons/magnifying-glass-solid (1).svg" alt="">
+                    </div>
+                    <a href="#navLink0">Pizza</a>
+                    <a href="#navLink1">Pasta</a>
+                    <a href="#navLink2">Burger</a>
+                </div>
+
+            </div>
+
+            <div class="main-content d-flex">
+                <!-- render in js -->
+                <div id="content" class="main-content-container"></div>
+
+            </div>
+
+        </div>
+
+        <div id="sideBasket" class="side-basket d-flex">
+            <h2 class="basket-title">Warenkorb</h2>
+
+            <button onclick="toggleResponsiveBasket()" class="close-responsive d-none">
+                <img src="./img/icons/xmark-solid (1).svg" alt="">
+            </button>
+
+            <div class="delivery-pickup">
+                <button id="deliveryButton" onclick="toggleButton(this)"
+                    class="delivery-btn active-button">Lieferung</button>
+                <button id="pickUpButton" onclick="toggleButton(this)" class="pickup-btn">Abholung</button>
+            </div>
+            <!-- render in js -->
+            <div id="basket" class="basket"></div>
+        </div>
+    </main>
+
+    <!-- render in js -->
+    <div id="responsiveBasketButton" class="responsive-basket d-none"></div>
+
+    <div onclick="closePopup()" id="orderPopup" class="complete-order-popup display-none">
+        <div onclick="doNotClose(event)" class="popup-card d-flex">
+            <h1>Vielen Dank &#10084;&#xFE0F;</h1>
+            <h3>Deine Bestellung ist bei uns eingegangen und wird bald für dich zubereitet</h3>
+            <button onclick="closePopup()" class="close-popup d-flex">
+                <img src="./img/icons/xmark-solid (1).svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer d-flex">
+        <div class="footer-links d-flex">
+            <a href="#">AGB</a>
+            <a href="#">Datenschutz</a>
+            <a href="#">Impressum</a>
+        </div>
+        <div>
+            <span class="copyright">© 2024 Lieferando.at</span>
+        </div>
+    </footer>
+
+    <script src="htmlTemplates.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
